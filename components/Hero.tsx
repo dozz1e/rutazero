@@ -34,12 +34,12 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="relative z-10 max-w-3xl space-y-6">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">
+              <span className="texto-dorado font-bold tracking-widest text-sm uppercase">
                 Relaciones de confianza
               </span>
               <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
                 Movemos grandes desafíos en{" "}
-                <span className="text-primary">RutaZero</span>
+                <span className="texto-dorado">RutaZero</span>
               </h1>
               <p className="text-slate-200 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
                 Especialistas en transporte de carga pesada y sobredimensión,
@@ -80,12 +80,12 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="relative z-10 max-w-3xl space-y-6">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">
+              <span className="texto-dorado font-bold tracking-widest text-sm uppercase">
                 Estándares Mineros
               </span>
               <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
                 Seguridad y Confianza en{" "}
-                <span className="text-primary">Cada Kilómetro</span>
+                <span className="texto-dorado">Cada Kilómetro</span>
               </h2>
               <p className="text-slate-200 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
                 Protocolos estrictos y planificación técnica detallada para
@@ -118,12 +118,12 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="relative z-10 max-w-3xl space-y-6">
-              <span className="text-primary font-bold tracking-widest text-sm uppercase">
+              <span className="texto-dorado font-bold tracking-widest text-sm uppercase">
                 De Norte a Sur
               </span>
               <h2 className="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white">
                 Cobertura Nacional para la{" "}
-                <span className="text-primary">Minería</span>
+                <span className="texto-dorado">Minería</span>
               </h2>
               <p className="text-slate-200 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
                 Conectamos las principales rutas del territorio nacional con una
