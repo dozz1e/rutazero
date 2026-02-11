@@ -6,13 +6,13 @@ const BrandBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-20 lg:px-40 flex flex-col items-center justify-center text-center gap-6 md:gap-8">
         {/* Brand Name with generic 'cut' effect style */}
         <div className="relative inline-block">
-          <img src="images/logo.png" alt="Logo" className="w-80 h-50" />
+          <img src="images/logo.svg" alt="Logo" className="w-80 h-50" />
         </div>
 
         {/* Subtitle */}
         <div className="space-y-6">
           <h3 className="text-xl md:text-3xl font-bold text-slate-900 tracking-[0.2em] uppercase">
-            Equipo – Confianza – Innovación
+            Equipo – Confianza – Compromiso
           </h3>
           <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
         </div>

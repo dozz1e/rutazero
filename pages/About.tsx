@@ -6,22 +6,23 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h2 className="text-primary text-sm font-bold tracking-widest uppercase">
+            <h2 className="texto-dorado text-sm font-bold tracking-widest uppercase">
               Nuestra Identidad
             </h2>
-            <h1 className="text-5xl font-black">
-              Relaciones de confianza y desarrollo logístico del país.
+            <h1 className="text-4xl font-black">
+              Construimos relaciones de confianza que impulsan el desarrollo
+              logístico del país
             </h1>
             <div className="h-1.5 w-20 bg-primary rounded-full"></div>
           </div>
           <div className="text-text-muted text-lg leading-relaxed space-y-6">
             <p>
               Somos una empresa especializada en el transporte de carga pesada y
-              sobredimensionada con cobertura a nivel nacional, comprometida con
-              ofrecer soluciones logísticas seguras, eficientes y confiables.
-              Contamos con una sólida trayectoria en el sector, respaldada por
-              la experiencia, profesionalismo y responsabilidad que nos
-              caracterizan en cada operación.
+              sobredimensionada, con cobertura a nivel nacional. Nos
+              comprometemos a brindar soluciones logísticas seguras, eficientes
+              y confiables, respaldadas por una sólida trayectoria y un equipo
+              que actúa con experiencia, profesionalismo y responsabilidad en
+              cada operación.
             </p>
           </div>
         </div>

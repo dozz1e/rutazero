@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
     <div className="py-20 px-6 md:px-20 lg:px-40">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="max-w-3xl space-y-4">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm">
+          <span className="texto-dorado font-bold tracking-widest uppercase text-sm">
             Contáctanos
           </span>
           <h1 className="text-4xl md:text-5xl font-black">
@@ -172,7 +172,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Info Column */}
-          <div className="lg:col-span-5 space-y-12">
+          <div className="lg:col-span-5 flex flex-col gap-12">
             <div className="space-y-8">
               {[
                 {
@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Dynamic Map Container */}
-            <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden aspect-video relative group shadow-2xl">
+            <div className="flex-1 bg-white border border-slate-200 rounded-2xl overflow-hidden relative group shadow-2xl min-h-[400px]">
               <div ref={mapContainerRef} className="w-full h-full z-0" />
               <div className="absolute top-4 left-4 z-[400] pointer-events-none">
                 <span className="bg-white/90 px-4 py-1.5 rounded-full border border-primary/30 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest backdrop-blur-sm shadow-xl">

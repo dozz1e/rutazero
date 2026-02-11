@@ -135,22 +135,13 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
         <div className="flex items-center gap-3">
-          <img src="images/logo.webp" alt="Logo" className="w-96 h-40" />
+          <img src="images/logo.webp" alt="Logo" className="w-64 h-20" />
         </div>
-        <div className="flex flex-wrap justify-center gap-6 text-text-muted text-sm">
-          <Link to="/nosotros" className="hover:text-primary transition-colors">
-            Nosotros
-          </Link>
-          <a href="#" className="hover:text-primary transition-colors">
-            Seguridad Minera
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            Políticas de Carga
-          </a>
-          <a href="#" className="hover:text-primary transition-colors">
-            Legal
-          </a>
-        </div>
+        <ul className="flex flex-wrap justify-center gap-6 flex-col">
+          <li>contacto@rutazero.cl</li>
+          <li>+56 9 9751 9715</li>
+          <li>Av. Apoquindo 6410, piso 10. Las Condes, Santiago.</li>
+        </ul>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-4 text-text-muted text-xs border-t border-accent-dark/30 pt-8">
         <p>© 2026 RutaZero Chile. Todos los derechos reservados.</p>

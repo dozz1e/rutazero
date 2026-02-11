@@ -126,7 +126,7 @@ const Home: React.FC = () => {
       <section className="px-6 md:px-20 lg:px-40 py-24 bg-slate-50 border-y border-slate-200">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
-            <span className="text-primary font-bold tracking-widest text-xs">
+            <span className="texto-dorado font-bold tracking-widest text-xs">
               Cultura RutaZero
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900">
@@ -180,11 +180,11 @@ const Home: React.FC = () => {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-5 space-y-8">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-primary">
+                  <div className="flex items-center gap-3 texto-dorado">
                     <span className="material-symbols-outlined text-4xl">
                       architecture
                     </span>
-                    <span className="tracking-[0.3em] font-black text-xs">
+                    <span className="tracking-[0.3em] font-black text-xs texto-dorado">
                       Excelencia Técnica
                     </span>
                   </div>
