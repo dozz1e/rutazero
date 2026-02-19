@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // Declare Leaflet global variable to avoid TS errors
 declare var L: any;
@@ -6,6 +6,43 @@ declare var L: any;
 const Contact: React.FC = () => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<any>(null);
+
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string | null;
+  }>({ type: null, message: null });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: null, message: null });
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("https://rutazero.cl/send-contact.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        setStatus({ type: "success", message: data.message });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setStatus({ type: "error", message: data.message });
+      }
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "Hubo un problema al conectar con el servidor.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return;
@@ -99,7 +136,7 @@ const Contact: React.FC = () => {
               </span>
               Detalles del Requerimiento
             </h3>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-white text-xs font-bold uppercase tracking-widest">
@@ -107,6 +144,8 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="text"
+                    name="nombre"
+                    required
                     placeholder="Ej: Juan Pérez"
                     className="w-full h-12 bg-slate-100 border-none rounded-lg text-slate-900 focus:ring-1 focus:ring-primary placeholder:text-text-muted/40 px-4 outline-none"
                   />
@@ -117,6 +156,7 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="text"
+                    name="empresa"
                     placeholder="Nombre de la compañía"
                     className="w-full h-12 bg-slate-100 border-none rounded-lg text-slate-900 focus:ring-1 focus:ring-primary placeholder:text-text-muted/40 px-4 outline-none"
                   />
@@ -129,6 +169,8 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="contacto@empresa.cl"
                     className="w-full h-12 bg-slate-100 border-none rounded-lg text-slate-900 focus:ring-1 focus:ring-primary placeholder:text-text-muted/40 px-4 outline-none"
                   />
@@ -139,6 +181,7 @@ const Contact: React.FC = () => {
                   </label>
                   <input
                     type="tel"
+                    name="telefono"
                     placeholder="+56 9 XXXX XXXX"
                     className="w-full h-12 bg-slate-100 border-none rounded-lg text-slate-900 focus:ring-1 focus:ring-primary placeholder:text-text-muted/40 px-4 outline-none"
                   />
@@ -150,6 +193,8 @@ const Contact: React.FC = () => {
                   Detalle del Requerimiento
                 </label>
                 <textarea
+                  name="mensaje"
+                  required
                   rows={5}
                   placeholder="Describa dimensiones, peso aproximado y ruta..."
                   className="w-full bg-slate-100 border-none rounded-lg text-slate-900 focus:ring-1 focus:ring-primary p-4 placeholder:text-text-muted/40 outline-none resize-none"
@@ -158,14 +203,32 @@ const Contact: React.FC = () => {
               <div className="flex items-center gap-3">
                 <input
                   type="checkbox"
+                  required
                   className="rounded bg-white/20 border-none text-primary focus:ring-primary size-5"
                 />
                 <span className="text-blue-100 text-sm">
                   Acepto los términos de privacidad y procesamiento de datos.
                 </span>
               </div>
-              <button className="w-full md:w-max px-12 h-14 bg-white text-primary font-black rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
-                Enviar Solicitud{" "}
+
+              {status.message && (
+                <div
+                  className={`p-4 rounded-lg text-sm font-bold ${
+                    status.type === "success"
+                      ? "bg-green-500/20 text-green-100"
+                      : "bg-red-500/20 text-red-100"
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full md:w-max px-12 h-14 bg-white text-primary font-black rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                {loading ? "Enviando..." : "Enviar Solicitud"}
                 <span className="material-symbols-outlined">send</span>
               </button>
             </form>

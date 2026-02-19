@@ -112,7 +112,7 @@ const Home: React.FC = () => {
           <div className="flex-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="images/inicio.webp"
+                src="images/inicio2.webp"
                 alt="Truck"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />

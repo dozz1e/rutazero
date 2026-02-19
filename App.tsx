@@ -133,18 +133,102 @@ const Navbar = () => {
 const Footer = () => (
   <footer className="bg-accent-dark/20 border-t border-accent-dark py-12 px-6 md:px-20 lg:px-40">
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-        <div className="flex items-center gap-3">
-          <img src="images/logo.webp" alt="Logo" className="w-64 h-20" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        {/* Primera columna: Logo */}
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <img
+            src="images/logo.webp"
+            alt="Logo"
+            className="w-64 h-20 object-contain"
+          />
+          <p className="text-text-muted text-sm text-center md:text-left">
+            Comprometidos con la excelencia en logística y transporte de carga
+            pesada.
+          </p>
         </div>
-        <ul className="flex flex-wrap justify-center gap-6 flex-col">
-          <li>contacto@rutazero.cl</li>
-          <li>+56 9 9751 9715</li>
-          <li>Av. Apoquindo 6410, piso 10. Las Condes, Santiago.</li>
-        </ul>
+
+        {/* Segunda columna: Información de contacto */}
+        <div className="flex flex-col gap-6">
+          <h4 className="text-primary font-black uppercase tracking-widest text-sm">
+            Contacto
+          </h4>
+          <ul className="space-y-4">
+            <li>
+              <a
+                href="mailto:contacto@rutazero.cl"
+                className="flex items-center gap-3 text-slate-700 hover:text-primary transition-colors group"
+              >
+                <div className="size-10 bg-primary/10 flex items-center justify-center rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <span className="material-symbols-outlined text-[20px]">
+                    mail
+                  </span>
+                </div>
+                <span className="font-medium">contacto@rutazero.cl</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+56997519715"
+                className="flex items-center gap-3 text-slate-700 hover:text-primary transition-colors group"
+              >
+                <div className="size-10 bg-primary/10 flex items-center justify-center rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                  <span className="material-symbols-outlined text-[20px]">
+                    call
+                  </span>
+                </div>
+                <span className="font-medium">+56 9 9751 9715</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Tercera columna: Dirección y Horario */}
+        <div className="flex flex-col gap-6">
+          <h4 className="text-primary font-black uppercase tracking-widest text-sm">
+            Ubicación y Horario
+          </h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3 text-slate-700">
+              <div className="size-10 bg-primary/10 flex items-center justify-center rounded-lg text-primary flex-shrink-0">
+                <span className="material-symbols-outlined text-[20px]">
+                  location_on
+                </span>
+              </div>
+              <span className="font-medium leading-tight">
+                Av. Apoquindo 6410, piso 10.
+                <br />
+                Las Condes, Santiago.
+              </span>
+            </li>
+            <li className="flex items-start gap-3 text-slate-700">
+              <div className="size-10 bg-primary/10 flex items-center justify-center rounded-lg text-primary flex-shrink-0">
+                <span className="material-symbols-outlined text-[20px]">
+                  schedule
+                </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="font-medium">Lun-Vie: 09:00 - 17:00</span>
+                <span className="text-xs text-text-muted">
+                  Soporte 24/7 disponible
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-4 text-text-muted text-xs border-t border-accent-dark/30 pt-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-text-muted text-xs border-t border-accent-dark/30 pt-8">
         <p>© 2026 RutaZero Chile. Todos los derechos reservados.</p>
+        <span>
+          Diseñado por{" "}
+          <a
+            href="https://2zz.cl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-accent transition-colors hover:underline"
+          >
+            2zz.cl
+          </a>
+        </span>
       </div>
     </div>
   </footer>
