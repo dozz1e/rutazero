@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../components/SEO";
 
 interface GalleryItem {
   title: string;
@@ -19,12 +20,16 @@ const Gallery: React.FC = () => {
     "images/camiones/19.webp",
     "images/camiones/21.webp",
     "images/camiones/24.webp",
-    "images/camiones/6.webp",
     "images/camiones/14.webp",
   ];
 
   return (
     <div className="py-20 px-6 md:px-20 lg:px-40">
+      <SEO
+        title="Galería de Proyectos"
+        description="Explora nuestra galería de proyectos de transporte de carga pesada y logística minera en Chile. Equipos de vanguardia y operaciones exitosas."
+        image="/images/camiones/24.webp"
+      />
       <div className="max-w-7xl mx-auto space-y-12">
         <section className="bg-gradient-to-br from-slate-100 to-white border border-slate-200 p-12 rounded-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>

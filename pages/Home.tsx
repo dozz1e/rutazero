@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import BrandBar from "../components/BrandBar";
+import SEO from "../components/SEO";
 
 const Home: React.FC = () => {
   const testimonials = [
@@ -85,6 +86,10 @@ const Home: React.FC = () => {
 
   return (
     <div>
+      <SEO
+        title="Logística & Carga Pesada en Chile"
+        description="Especialistas en transporte de carga sobredimensionada, logística minera y proyectos industriales en todo Chile. Seguridad y eficiencia en cada kilómetro."
+      />
       <Hero />
       <BrandBar />
 

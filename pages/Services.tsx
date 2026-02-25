@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 const Services: React.FC = () => {
   const services = [
@@ -42,6 +43,11 @@ const Services: React.FC = () => {
 
   return (
     <div className="py-20 px-6 md:px-20 lg:px-40">
+      <SEO
+        title="Servicios de Logística"
+        description="Transporte de carga exclusiva, consolidada, logística portuaria y transporte de carga sobredimensionada con escolta y gestión de permisos."
+        image="/images/camiones/20.webp"
+      />
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="max-w-3xl space-y-4">
           <span className="texto-dorado font-bold tracking-widest uppercase text-sm">
@@ -79,7 +85,7 @@ const Services: React.FC = () => {
                   {s.title}
                 </h3>
                 <p
-                  className="text-text-muted text-lg leading-relaxed"
+                  className="text-text-muted text-lg leading-relaxed text-justify"
                   dangerouslySetInnerHTML={{ __html: s.desc }}
                 />
               </div>

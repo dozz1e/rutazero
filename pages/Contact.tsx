@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import SEO from "../components/SEO";
 
 // Declare Leaflet global variable to avoid TS errors
 declare var L: any;
@@ -113,6 +114,10 @@ const Contact: React.FC = () => {
 
   return (
     <div className="py-20 px-6 md:px-20 lg:px-40">
+      <SEO
+        title="Contacto y Cotización"
+        description="Solicita tu presupuesto para transporte de carga pesada y sobredimensionada. Atención rápida y personalizada para proyectos logísticos en todo Chile."
+      />
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="max-w-3xl space-y-4">
           <span className="texto-dorado font-bold tracking-widest uppercase text-sm">
