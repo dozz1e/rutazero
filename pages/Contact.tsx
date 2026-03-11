@@ -218,11 +218,10 @@ const Contact: React.FC = () => {
 
               {status.message && (
                 <div
-                  className={`p-4 rounded-lg text-sm font-bold ${
-                    status.type === "success"
+                  className={`p-4 rounded-lg text-sm font-bold ${status.type === "success"
                       ? "bg-green-500/20 text-green-100"
                       : "bg-red-500/20 text-red-100"
-                  }`}
+                    }`}
                 >
                   {status.message}
                 </div>
@@ -251,7 +250,7 @@ const Contact: React.FC = () => {
                 {
                   icon: "call",
                   title: "Atención Comercial",
-                  desc: "+56 9 97519715 | contacto@rutazero.cl",
+                  desc: "+56 9 87358963 | contacto@rutazero.cl",
                 },
                 {
                   icon: "schedule",

@@ -18,11 +18,11 @@ const TopBar = () => (
           <span>contacto@rutazero.cl</span>
         </a>
         <a
-          href="tel:+56997519715"
+          href="tel:+56987358963"
           className="flex items-center gap-2 hover:text-primary transition-colors"
         >
           <span className="material-symbols-outlined text-[16px]">call</span>
-          <span>+56 9 9751 9715</span>
+          <span>+56 9 8735 8963</span>
         </a>
       </div>
       <div className="hidden md:flex items-center gap-4 text-slate-400">
@@ -34,7 +34,7 @@ const TopBar = () => (
 
 const FloatingWhatsApp = () => (
   <a
-    href="https://wa.me/56997519715"
+    href="https://wa.me/56987358963"
     target="_blank"
     rel="noopener noreferrer"
     className="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 bg-[#25D366] text-white rounded-full shadow-lg hover:scale-110 hover:shadow-green-500/30 transition-all duration-300 group"
@@ -78,11 +78,10 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === link.path
-                  ? "text-primary"
-                  : "text-slate-900"
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.path
+                ? "text-primary"
+                : "text-slate-900"
+                }`}
             >
               {link.name}
             </Link>
@@ -168,7 +167,7 @@ const Footer = () => (
             </li>
             <li>
               <a
-                href="tel:+56997519715"
+                href="tel:+56987358963"
                 className="flex items-center gap-3 text-slate-700 hover:text-primary transition-colors group"
               >
                 <div className="size-10 bg-primary/10 flex items-center justify-center rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-all">
@@ -176,7 +175,7 @@ const Footer = () => (
                     call
                   </span>
                 </div>
-                <span className="font-medium">+56 9 9751 9715</span>
+                <span className="font-medium">+56 9 8735 8963</span>
               </a>
             </li>
           </ul>
