@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <div className="pt-20 px-6 md:px-20 lg:px-40 space-y-32">
       <SEO
         title="Sobre Nosotros"
-        description="Conoce la trayectoria de Ruta Zero, expertos en logística de alta complejidad y transporte de maquinaria pesada para la minería e industria chilena."
+        description="Conoce la trayectoria de RutaZero, expertos en logística de alta complejidad y transporte de maquinaria pesada para la minería e industria chilena."
         image="/images/nosotros.webp"
       />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

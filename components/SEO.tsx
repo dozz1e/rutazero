@@ -18,8 +18,8 @@ const SEO: React.FC<SEOProps> = ({
   const baseUrl = "https://rutazero.cl";
   const currentUrl = `${baseUrl}/#${location.pathname}`;
 
-  const siteName = "Ruta Zero | Logística & Carga Pesada";
-  const fullTitle = title ? `${title} | Ruta Zero` : siteName;
+  const siteName = "RutaZero | Logística & Carga Pesada";
+  const fullTitle = title ? `${title} | RutaZero` : siteName;
   const defaultDescription =
     "Especialistas en transporte de carga sobredimensionada, logística minera y proyectos industriales en todo Chile. Seguridad y eficiencia en cada kilómetro.";
   const metaDescription = description || defaultDescription;
@@ -53,7 +53,7 @@ const SEO: React.FC<SEOProps> = ({
     updateMeta("og:url", currentUrl, true);
     updateMeta("og:image", `${baseUrl}${image}`, true);
     updateMeta("og:type", type, true);
-    updateMeta("og:site_name", "Ruta Zero Chile", true);
+    updateMeta("og:site_name", "RutaZero Chile", true);
 
     // Twitter
     updateMeta("twitter:card", "summary_large_image");
